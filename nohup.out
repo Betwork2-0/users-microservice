@@ -1,0 +1,1554 @@
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    start_users_microservice()
+  File "main.py", line 8, in start_users_microservice
+    port=5011
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/main.py", line 569, in run
+    server.run()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib64/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib64/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/server.py", line 67, in serve
+    config.load()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/config.py", line 474, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/importer.py", line 24, in import_from_string
+    raise exc from None
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib64/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ec2-user/users-microservice/app.py", line 4, in <module>
+    from users_endpoint import users_info_router
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 3, in <module>
+    import db_util
+  File "/home/ec2-user/users-microservice/db_util.py", line 7, in <module>
+    from passlib.hash import bcrypt
+ModuleNotFoundError: No module named 'passlib'
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    start_users_microservice()
+  File "main.py", line 8, in start_users_microservice
+    port=5011
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/main.py", line 569, in run
+    server.run()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib64/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib64/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/server.py", line 67, in serve
+    config.load()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/config.py", line 474, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/importer.py", line 24, in import_from_string
+    raise exc from None
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib64/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ec2-user/users-microservice/app.py", line 4, in <module>
+    from users_endpoint import users_info_router
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 3, in <module>
+    import db_util
+  File "/home/ec2-user/users-microservice/db_util.py", line 7, in <module>
+    from passlib.hash import bcrypt
+ModuleNotFoundError: No module named 'passlib'
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    start_users_microservice()
+  File "main.py", line 8, in start_users_microservice
+    port=5011
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/main.py", line 569, in run
+    server.run()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib64/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib64/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/server.py", line 67, in serve
+    config.load()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/config.py", line 474, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/importer.py", line 24, in import_from_string
+    raise exc from None
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib64/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ec2-user/users-microservice/app.py", line 4, in <module>
+    from users_endpoint import users_info_router
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 3, in <module>
+    import db_util
+  File "/home/ec2-user/users-microservice/db_util.py", line 7, in <module>
+    from passlib.hash import bcrypt
+ModuleNotFoundError: No module named 'passlib'
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    start_users_microservice()
+  File "main.py", line 8, in start_users_microservice
+    port=5011
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/main.py", line 569, in run
+    server.run()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib64/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib64/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/server.py", line 67, in serve
+    config.load()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/config.py", line 474, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/importer.py", line 24, in import_from_string
+    raise exc from None
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/importer.py", line 21, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib64/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ec2-user/users-microservice/app.py", line 4, in <module>
+    from users_endpoint import users_info_router
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 3, in <module>
+    import db_util
+  File "/home/ec2-user/users-microservice/db_util.py", line 7, in <module>
+    from passlib.hash import bcrypt
+ModuleNotFoundError: No module named 'passlib'
+INFO:     Started server process [24993]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:5011 (Press CTRL+C to quit)
+INFO:     160.39.61.29:59353 - "GET / HTTP/1.1" 404 Not Found
+INFO:     160.39.61.29:59353 - "GET /docs HTTP/1.1" 200 OK
+INFO:     160.39.61.29:59353 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     160.39.61.29:59353 - "GET /api/health HTTP/1.1" 503 Service Unavailable
+INFO:     98.198.4.158:54836 - "GET /docs HTTP/1.1" 200 OK
+INFO:     98.198.4.158:54836 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     98.198.4.158:54954 - "GET /docs HTTP/1.1" 200 OK
+INFO:     98.198.4.158:54954 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     87.236.176.114:48163 - "GET / HTTP/1.1" 404 Not Found
+INFO:     44.212.180.194:44496 - "POST /api/v1/users/signup HTTP/1.1" 422 Unprocessable Entity
+INFO:     44.206.4.94:24570 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     3.238.212.140:41250 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     44.206.6.80:38208 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     44.210.64.137:5096 - "GET /api/v1/users/users/me HTTP/1.1" 307 Temporary Redirect
+INFO:     3.216.143.9:20714 - "POST /api/v1/users/signup HTTP/1.1" 422 Unprocessable Entity
+INFO:     3.216.145.57:15718 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.137.33:3334 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.238.215.87:19364 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.212.178.27:47746 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.138.234:13340 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.212.183.241:8706 - "POST /api/v1/users/signup HTTP/1.1" 422 Unprocessable Entity
+INFO:     3.216.145.174:49420 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.210.65.123:36368 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     3.238.215.15:13194 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     44.212.176.223:7402 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     3.216.136.195:58564 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     44.210.65.114:6932 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.140.97:23552 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.142.55:59562 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.140.76:33660 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.142.115:43872 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.238.213.170:2226 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.136.61:28278 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.206.5.117:17998 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.212.181.173:3042 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.210.66.14:43454 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.141.87:32110 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.136.116:13760 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.206.5.114:45252 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.138.182:34766 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.238.214.248:51922 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.238.214.15:46676 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.238.212.249:25530 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.212.178.136:14062 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.238.213.41:49378 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.206.4.192:13628 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.206.5.4:39232 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.210.64.44:37622 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.141.174:32816 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.142.0:27782 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.137.154:55248 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.141.126:7740 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.141.164:46674 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.139.229:56194 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.136.102:14438 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.144.152:65162 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.238.215.19:37528 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.145.32:15142 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.210.66.16:2264 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.210.66.172:37012 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.212.183.88:60148 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.136.190:52638 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.143.61:41216 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.141.117:59146 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     71.183.91.159:61951 - "GET /docs HTTP/1.1" 200 OK
+INFO:     71.183.91.159:61951 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     3.216.140.175:16768 - "POST /api/v1/users/token HTTP/1.1" 422 Unprocessable Entity
+INFO:     71.183.91.159:62495 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     71.183.91.159:62688 - "POST /api/v1/users/token HTTP/1.1" 422 Unprocessable Entity
+INFO:     71.183.91.159:62982 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     3.216.143.238:43988 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     3.238.214.245:56188 - "GET /api/v1/users/user_id/1 HTTP/1.1" 200 OK
+INFO:     3.216.142.100:12304 - "GET /api/v1/users HTTP/1.1" 404 Not Found
+INFO:     3.216.137.234:42172 - "GET /api/v1/users HTTP/1.1" 404 Not Found
+INFO:     3.216.145.88:20020 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     3.216.145.211:42910 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     44.212.176.165:62276 - "POST /api/v1/users/token HTTP/1.1" 401 Unauthorized
+INFO:     3.216.142.156:62548 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     3.216.140.215:12918 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: string indices must be integers
+INFO:     44.206.5.149:42502 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     3.238.215.191:54150 - "POST /api/v1/users/token HTTP/1.1" 401 Unauthorized
+INFO:     3.216.137.119:46684 - "POST /api/v1/users/token HTTP/1.1" 401 Unauthorized
+INFO:     44.210.64.207:4766 - "POST /api/v1/users/token HTTP/1.1" 401 Unauthorized
+INFO:     44.206.5.190:31166 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     44.210.64.148:61672 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     3.216.143.250:42880 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     3.216.137.228:37924 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     3.216.138.216:31816 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: string indices must be integers
+INFO:     3.216.137.162:28378 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: string indices must be integers
+INFO:     44.212.183.94:38078 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     3.238.166.196:35980 - "POST /api/v1/users/token HTTP/1.1" 401 Unauthorized
+INFO:     3.216.139.152:14356 - "POST /api/v1/users/token HTTP/1.1" 401 Unauthorized
+INFO:     3.216.140.97:50902 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: string indices must be integers
+INFO:     44.206.7.121:45460 - "POST /api/v1/users/token HTTP/1.1" 401 Unauthorized
+INFO:     44.206.6.38:38572 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     44.206.6.116:29386 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     3.238.214.146:4752 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     44.206.6.87:47412 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     3.216.142.41:45306 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     3.238.212.7:61618 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     3.238.213.20:4942 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.210.66.231:33094 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     44.206.4.51:17574 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     87.236.176.95:47317 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.117:58942 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.117:59874 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.216.143.189:46174 - "DELETE /api/v1/users/email/ HTTP/1.1" 404 Not Found
+INFO:     108.29.51.207:63457 - "DELETE /api/v1/users/delete/user_id/1 HTTP/1.1" 404 Not Found
+INFO:     108.29.51.207:63482 - "DELETE /api/v1/users/delete/user_id/1 HTTP/1.1" 404 Not Found
+INFO:     108.29.51.207:60930 - "DELETE /api/v1/users/delete/user_id/1 HTTP/1.1" 404 Not Found
+INFO:     108.29.51.207:61022 - "GET /api/v1/users/delete/user_id/1 HTTP/1.1" 404 Not Found
+INFO:     108.29.51.207:61022 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     108.29.51.207:65270 - "DELETE /api/v1/users/delete/user_id/1 HTTP/1.1" 404 Not Found
+INFO:     108.29.51.207:54719 - "DELETE /api/v1/users/delete/user_id/ HTTP/1.1" 404 Not Found
+INFO:     108.29.51.207:57637 - "DELETE /api/v1/users/delete/user_id/ HTTP/1.1" 404 Not Found
+INFO:     108.29.51.207:57649 - "DELETE /api/v1/users/delete/user_id/1 HTTP/1.1" 404 Not Found
+INFO:     87.236.176.231:37039 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.216.141.92:61102 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.137.121:37178 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.206.7.95:14512 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.206.5.215:54110 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     44.206.5.233:52962 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     44.206.6.43:43570 - "POST /api/v1/users/token HTTP/1.1" 200 OK
+INFO:     167.94.138.60:58352 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.60:37010 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     104.28.104.166:11285 - "GET /docs HTTP/1.1" 200 OK
+INFO:     104.28.104.166:34816 - "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 Not Found
+INFO:     104.28.104.166:34816 - "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 Not Found
+INFO:     104.28.104.166:34816 - "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 Not Found
+INFO:     104.28.104.166:34816 - "GET /apple-touch-icon.png HTTP/1.1" 404 Not Found
+INFO:     87.236.176.249:59293 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.47:60518 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.47:52848 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     108.29.51.207:58389 - "GET /api/v1/users/book_shelf/books/%7Bys%7D HTTP/1.1" 404 Not Found
+INFO:     87.236.176.221:41453 - "GET / HTTP/1.1" 404 Not Found
+INFO:     98.15.85.28:63863 - "GET /docs HTTP/1.1" 200 OK
+INFO:     98.15.85.28:63863 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     44.212.177.156:46712 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.238.166.17:52980 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.238.212.173:36654 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.206.4.52:21374 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.144.4:43634 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.140.89:31096 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.206.6.199:31306 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.144.109:28466 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     3.216.143.85:1350 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     3.216.138.53:47312 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     44.206.4.107:9038 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     44.212.183.108:63546 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     44.210.66.152:33068 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     3.216.141.129:11792 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     44.212.179.153:64924 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     3.216.136.222:36460 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     44.212.180.236:36572 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     44.212.180.132:60628 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     44.212.180.205:45714 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     3.238.213.176:20452 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     44.212.179.110:12666 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 90, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24993]
+INFO:     Started server process [19968]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:5011 (Press CTRL+C to quit)
+INFO:     Started server process [20560]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:5011 (Press CTRL+C to quit)
+INFO:     108.29.51.207:50514 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     108.29.51.207:62055 - "GET /api/users/get_books/2 HTTP/1.1" 404 Not Found
+INFO:     108.29.51.207:51230 - "GET /api/users/get_books/jordi HTTP/1.1" 404 Not Found
+INFO:     108.29.51.207:60788 - "GET /api/users/get_books/jordi HTTP/1.1" 404 Not Found
+INFO:     108.29.51.207:60810 - "GET /api/users HTTP/1.1" 404 Not Found
+INFO:     160.39.61.29:59608 - "GET /docs HTTP/1.1" 200 OK
+INFO:     160.39.61.29:59608 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     108.29.51.207:56757 - "GET /api/v1/users/ HTTP/1.1" 307 Temporary Redirect
+INFO:     108.29.51.207:56757 - "GET /api/v1/users HTTP/1.1" 200 OK
+INFO:     160.39.61.29:59609 - "GET /api/v1/users/get_books/jordi HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 163, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 77, in get_user_books
+    return db_util.get_user_liked_books(username=user_name)
+  File "/home/ec2-user/users-microservice/db_util.py", line 207, in get_user_liked_books
+    result = execute_query(sql=sql, argument=username)
+  File "/home/ec2-user/users-microservice/db_util.py", line 79, in execute_query
+    _ = cursor.execute(sql, args=argument)  # provide the number of results
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.userswhere user_name = 'jordi'' at line 1")
+INFO:     108.29.51.207:64000 - "GET /api/v1/users/get_books/jordi HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 163, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 77, in get_user_books
+    return db_util.get_user_liked_books(username=user_name)
+  File "/home/ec2-user/users-microservice/db_util.py", line 207, in get_user_liked_books
+    result = execute_query(sql=sql, argument=username)
+  File "/home/ec2-user/users-microservice/db_util.py", line 79, in execute_query
+    _ = cursor.execute(sql, args=argument)  # provide the number of results
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.userswhere user_name = 'jordi'' at line 1")
+INFO:     Started server process [21219]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:5011 (Press CTRL+C to quit)
+INFO:     108.29.51.207:58549 - "PUT /api/v1/users/user_name/delete_user/bagel HTTP/1.1" 200 OK
+INFO:     108.29.51.207:58568 - "PUT /api/v1/users/user_name/delete_user/bagel HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:55245 - "GET /api/v1/users/get_books/jordi HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:54847 - "GET /api/v1/users/get_books/bagel HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     108.29.51.207:53615 - "GET /api/v1/users/book_shelf/get_books/test HTTP/1.1" 404 Not Found
+INFO:     108.29.51.207:51846 - "GET /api/v1/users/book_shelf/get_books/test HTTP/1.1" 404 Not Found
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:61107 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:52167 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:52168 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 422 Unprocessable Entity
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:55691 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:55692 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 422 Unprocessable Entity
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:59213 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:59214 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 422 Unprocessable Entity
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:61351 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:61352 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 422 Unprocessable Entity
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:50382 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:63372 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:52441 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:52442 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:49675 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:49676 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:56977 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:56978 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:57039 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:57040 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:57139 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:57140 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:57160 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:57161 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:57189 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:57190 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:57192 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:63643 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:63644 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:51202 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:51203 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:65090 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     108.29.51.207:65091 - "PUT /api/v1/users/user_name/delete_user/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:50176 - "GET /api/v1/users/get_books/compo HTTP/1.1" 200 OK
+INFO:     108.29.51.207:50177 - "PUT /api/v1/users/user_name/delete_user/compo HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:55908 - "GET /api/v1/users/get_books/compo HTTP/1.1" 200 OK
+INFO:     108.29.51.207:55909 - "PUT /api/v1/users/user_name/delete_user/compo HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:58365 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:54587 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:57795 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:59115 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+select liked_books from users_db.users where user_name = %s;
+INFO:     108.29.51.207:61059 - "GET /api/v1/users/get_books/test HTTP/1.1" 200 OK
+INFO:     3.216.143.86:37340 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 155, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     3.216.139.86:30430 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 155, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     44.210.66.93:14522 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 155, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: 'Response' object is not subscriptable
+INFO:     44.210.64.148:24084 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 155, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: list indices must be integers or slices, not str
+INFO:     3.238.214.93:27916 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.210.67.54:48164 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 155, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: list indices must be integers or slices, not str
+INFO:     3.216.136.141:64154 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.210.67.145:20094 - "GET /api/v1/users HTTP/1.1" 200 OK
+INFO:     44.212.177.167:20328 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 155, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: list indices must be integers or slices, not str
+INFO:     44.212.180.111:16840 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 155, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: list indices must be integers or slices, not str
+INFO:     44.210.66.61:60596 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 155, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: list indices must be integers or slices, not str
+INFO:     3.216.136.249:11036 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     44.210.66.93:5200 - "POST /api/v1/users/token HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    self.scope, self.receive, self.send
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/applications.py", line 270, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 706, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 236, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/fastapi/routing.py", line 161, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ec2-user/users-microservice/users_endpoint.py", line 155, in login_for_access_token
+    user = login_form.authenticate_user(form_data.username, form_data.password)
+  File "/home/ec2-user/users-microservice/login_form.py", line 55, in authenticate_user
+    if not verify_password(password, user['password']):
+TypeError: list indices must be integers or slices, not str
+INFO:     44.212.182.97:21278 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     3.216.139.206:11310 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
+INFO:     44.210.67.135:35878 - "POST /api/v1/users/signup HTTP/1.1" 201 Created
