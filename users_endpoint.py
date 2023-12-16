@@ -1,22 +1,103 @@
 from fastapi import APIRouter, status, Depends, HTTPException, Response
 from fastapi.security import OAuth2PasswordRequestForm
 import db_util
-from datetime import datetime, timedelta
+import requests 
+from datetime import datetime, timedelta, date
 from passlib.hash import bcrypt
 from fastapi.responses import JSONResponse
+from pytz import timezone
+from nba_api.live.nba.endpoints import scoreboard
 import login_form
-users_info_router = APIRouter(prefix='/api/v1/nba')
-#nba_info_router = APIRouter(prefix='/api/v1/nba')
+import json
+users_info_router = APIRouter(prefix='/api/v1')
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
+@users_info_router.get(path='/user/{user_name}/friends', status_code=status.HTTP_200_OK, operation_id='get_all_friends')
+def get_all_friends(user_name: str, response: Response):
+    """
+    return all friends of a user
+    """
+    try:
+        print("HERE")
+        print(user_name)
+        return db_util.get_all_friends(username=user_name)
+    except Exception as e:
+        response.status_code = status.HTTP_500_INTERNAL_SERVER_ERROR
+        return {"success": False, "payload": {"Error": e}}
 
-@users_info_router.get(path='/all-nba-games', status_code=status.HTTP_200_OK, operation_id='get_all_nba_games')
+@users_info_router.get(path='/user/saddr/{solidity_address}', status_code=status.HTTP_200_OK, operation_id='get_user_by_solidity_address')
+def get_user_by_solidity_address(solidity_address: str, response: Response):
+    """
+    return all user info by the user_name
+    """
+    try:
+        return db_util.get_user_by_solidity_address(solidity_address=solidity_address)
+    except Exception as e:
+        response.status_code = status.HTTP_500_INTERNAL_SERVER_ERROR
+        return {"success": False, "payload": {"Error": f'Error: {e} for solidity address: {solidity_address}'}}
+
+@users_info_router.post(path='/user/add-friend', status_code=status.HTTP_200_OK, operation_id='add_friend')
+def add_friend(friends:db_util.Friends, response: Response):
+    """
+    return success if friend was added
+    """
+    try:
+        return db_util.add_friend(username=friends.user_name, friend=friends.friend_user_name)
+    except Exception as e:
+        response.status_code = status.HTTP_500_INTERNAL_SERVER_ERROR
+        return {"success": False, "payload": {"Error": e}}
+
+@users_info_router.get(path='/user/{user_name}', status_code=status.HTTP_200_OK, operation_id='search_friend')
+def search_friend(user_name: str, response: Response):
+    """
+    return success if friend was added
+    """
+    try:
+        return db_util.get_user_by_username(user_name)
+    except Exception as e:
+        response.status_code = status.HTTP_500_INTERNAL_SERVER_ERROR
+        return {"success": False, "payload": {"Error": e}}
+
+@users_info_router.get(path='/nba/all-nba-games', status_code=status.HTTP_200_OK, operation_id='get_all_nba_games')
 def get_all_nba_games(response: Response):
     """
     return all NBA games that a user can bet on at the current time
     """
-    return [{'id':1, 'homeTeam':'LAL', 'awayTeam':'CHI','timeDate': 'test_time', 'homeMoneyLine': '-150', 'awayMoneyLine': '110'}] 
-        
+    # Today's Score Board
+    data = scoreboard.ScoreBoard()
+    data = json.loads(data.get_json())
+    # Extract the necessary information and format it
+    games = []
+    for game in data['scoreboard']['games']:
+        # Parse the original date and time
+        original_time = datetime.strptime(game['gameTimeUTC'], '%Y-%m-%dT%H:%M:%SZ')
+        # Convert to Eastern Time
+        eastern_time = original_time.replace(tzinfo=timezone('UTC')).astimezone(timezone('US/Eastern'))
+        formatted_time = eastern_time.strftime('%m/%d/%Y %I:%M%p EST')
+        games.append({
+            'id': game['gameId'],
+            'homeTeam': game['homeTeam']['teamTricode'],
+            'awayTeam': game['awayTeam']['teamTricode'],
+            'timeDate': formatted_time,
+            'homeMoneyLine': -110,
+            'awayMoneyLine': 170
+    })
+    if games:
+        return games
+    else:
+        # If the request was not successful, return an error message
+        # Create 5 fake games for the current day 
+        games = []
+        for i in range(5):
+            games.append({
+                'id': i,
+                'homeTeam': 'HOU',
+                'awayTeam': 'BOS',
+                'timeDate': '12/09/2023 07:00PM EST',
+                'homeMoneyLine': -110,
+                'awayMoneyLine': 170
+            })
+        return games
 
 @users_info_router.get(path='/test', status_code=status.HTTP_200_OK, operation_id='get_all_users')
 def get_user_info_by_id(response: Response):
@@ -163,7 +244,7 @@ def user_verification(user_name: str, code: db_util.VerificationCode, response: 
 ###############################################################################################################
 
 
-@users_info_router.post(path='/signup', status_code=status.HTTP_201_CREATED,
+@users_info_router.post(path='/users/signup', status_code=status.HTTP_201_CREATED,
                         operation_id='create_new_user')
 def create_new_user(user: db_util.User, response: Response):
     """
@@ -173,8 +254,9 @@ def create_new_user(user: db_util.User, response: Response):
         first_name = user.first_name
         last_name = user.last_name
         email = user.email
+        solidity_address = user.solidity_address
         password = bcrypt.hash(user.password)
-        return db_util.new_user(username=username, password=password, email=email, first_name=first_name,
+        return db_util.new_user(username=username, password=password, solidity_address=solidity_address, email=email, first_name=first_name,
                                 last_name=last_name)
     except Exception as e:
         response.status_code = status.HTTP_500_INTERNAL_SERVER_ERROR
@@ -186,6 +268,20 @@ def create_new_user(user: db_util.User, response: Response):
                 Login and authentication routes
 =================================================================================================================
 """
+
+@users_info_router.post(path="/users/login", status_code=status.HTTP_200_OK, operation_id='login_user')
+def login_user(user: db_util.User, response: Response):
+    """
+    return: valid or invalid login
+    """
+    print("THIS IS NOT GETTING CALLED")
+    try:
+        username = user.user_name
+        password = user.password
+        return db_util.login(username=username, password=password)
+    except:
+        response.status_code = status.HTTP_500_INTERNAL_SERVER_ERROR
+        return {"success": False, "payload": {"Error": "Invalid Login"}}
 
 
 @users_info_router.post("/token", response_model=login_form.Token)

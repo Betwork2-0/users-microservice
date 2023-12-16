@@ -10,3 +10,5 @@ bcrypt
 pyjwt
 python-jose[cryptography]
 boto3
+nba_api
+pymongo

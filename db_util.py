@@ -7,6 +7,8 @@ from pydantic import BaseModel
 from passlib.hash import bcrypt
 import uuid
 from email_verf import send_email
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 
 
 database_name = "users_db.users"
@@ -24,6 +26,10 @@ class Books(BaseModel):
 class UserSoftDelete(BaseModel):
     disable: bool
 
+class Friends(BaseModel):
+    user_name: str
+    friend_user_name: str
+
 
 class User(BaseModel):
     """
@@ -31,7 +37,8 @@ class User(BaseModel):
     """
     user_name: str
     password: str
-    email: str
+    solidity_address: Optional[str] = None
+    email: Optional[str] = None
     first_name: Optional[str] = None
     last_name: Optional[str] = None
     google_id: Optional[str] = None
@@ -50,25 +57,103 @@ class DbUsersSystem:
 
     @staticmethod
     def get_connection():  # TODO: Change later localhost..
-        user = "admin"
-        password = "the_warriors"
-        host = "books.c4m5teyjg8v7.us-east-1.rds.amazonaws.com"
+        #user = "admin"
+        #password = "the_warriors"
+        host = "mongodb+srv://betworkdev:betworkdev@cluster0.ktcz1j8.mongodb.net/?retryWrites=true&w=majority"
         # testing info
         # user = "root"
         # password = "Revamped1!"
         # host = "localhost"
         try:
-            connection = pymysql.connect(user=user,
-                                         password=password,
-                                         host=host,
-                                         cursorclass=pymysql.cursors.DictCursor,
-                                         autocommit=True)
-
+            print("test 1")
+            client = MongoClient(host, server_api=ServerApi('1'))
+            print("test 2")
         except Exception:
             return None
-        return connection
+        return client 
+
+def get_all_friends(username: str):
+    """
+    returns all friends of a user
+    """
+    try:
+        client = DbUsersSystem.get_connection()
+        db = client.db
+        result = db.users.find_one({'user_name': username})
+        print(result)
+        #if result has a friends field
+        if result:
+            friends = result.get('friends', [])
+            ans = []
+            print("DSFSDFDSF" + friends[0])
+            if friends:
+                print("LKSDJLKSDFLKJSDLKJSDLKJSDFJLK")
+                for friend in friends:
+                    print ("sdjlfalskdjf")
+                    ans.append((friend, get_solidity_address(friend)))
+                print("still ok")
+                return {
+                    "success": True,
+                    "payload": ans
+                }
+            return {"success": False, "payload": "User has no friends"}
+        return {"success": False, "payload": "User not found"}
+    except Exception as e:
+        return {"success": False, "payload": e}
+
+def get_solidity_address(username: str):
+    """
+    returns the solidity address of a user
+    """
+    print("got here")
+    try:
+        client = DbUsersSystem.get_connection()
+        db = client.db
+        result = db.users.find_one({'user_name': username})
+        if result:
+            print(result['solidity_address'])
+            return result['solidity_address']
+        return "addr_err"
+    except Exception as e:
+        return "addr_err"
+
+def get_user_by_solidity_address(solidity_address: str):
+    """
+    returns a user based on solidity address
+    """
+    try:
+        client = DbUsersSystem.get_connection()
+        db = client.db
+        result = db.users.find_one({'solidity_address': solidity_address})
+        print(result)
+        if result:
+            result['_id'] = str(result['_id'])
+            return {
+                "success": True,
+                "payload": result
+            }
+        return {"success": False, "payload": "User Not Found"}
+    except Exception as e:
+        return {"success": False, "payload": e}
 
 
+def search_friend(username: str):
+    """
+    returns a friend based on username
+    """
+    try:
+        result = get_user_by_username(username) 
+        print("Got Here in search_friend")
+        print(result)
+        if result:
+            result['_id'] = str(result['_id'])
+            return {
+                "success": True,
+                "payload": result
+            }
+        return {"success": False, "payload": "User Not Found"}
+    except Exception as e:
+        return {"success": False, "payload": e}
 
 
 def execute_query(sql: str, argument: Optional[Any] = None):
@@ -90,16 +175,33 @@ def execute_query(sql: str, argument: Optional[Any] = None):
     except Exception:
         return None
 
+def login(username:str, password:str):
+    try:
+        client = DbUsersSystem.get_connection()
+        db = client.db
+        result = db.users.find_one({'user_name': username})
+        if result:
+            if bcrypt.verify(password, result['password']):
+                result['_id'] = str(result['_id'])
+                return {
+                    "success": True,
+                    "payload": result
+                }
+            return {"success": False, "payload": "Wrong password"}
+    except Exception as e:
+        return {"success": False, "payload": "User Not Found"}
+
+
 
 def get_user_by_email(email: str):
     """
-
     :param email: email for query
     :return: all user info
     """
     try:
-        sql = "select * from " + database_name + " where email = %s and disabled = false;"
-        result = execute_query(sql=sql, argument=email)
+        client = DbUsersSystem.get_connection()
+        db = client.db
+        result = db.users.find_one({'email': email})
         if result:
             return {
                 "success": True,
@@ -109,6 +211,42 @@ def get_user_by_email(email: str):
     except Exception as e:
         return {"success": False, "payload": e}
 
+def add_friend(username: str, friend: str):
+    """
+    :param username: username of the user
+    :param friend: username of the friend
+    :return: success True or False
+    """
+    try:
+        client = DbUsersSystem.get_connection()
+        db = client.db
+        print(username, friend)
+        result_user = db.users.find_one({'user_name': username})
+        result_friend = db.users.find_one({'user_name': friend})
+        if result_user and result_friend:
+            print("HEREEEEE")
+            if not result_user.get('friends', []):
+                new_friends = [friend]
+            else:
+                current_friends = result_user['friends']
+                if friend in current_friends:
+                    return {"success": False, "payload": "Friend is already added"}
+                new_friends = result_user['friends'].append(friend)
+            db.users.update_one({'user_name': username}, {'$set': {'friends': new_friends}})
+            if not result_friend.get('friends', []):
+                new_friends = [username]
+            else:
+                current_friends = result_friend['friends']
+                if username in current_friends:
+                    return {"success": False, "payload": "Friend is already added"}
+                new_friends = result_friend['friends'].append(username)
+            return {
+                "success": True,
+                "payload": "Friend added successfully"
+            }
+        return {"success": False, "payload": "User or Friend not found"}
+    except Exception as e:
+        return {"success": False, "payload": e}
 
 def get_all_users():
     """
@@ -145,13 +283,14 @@ def get_user_by_id(user_id: int):
 
 def get_user_by_username(username: str):
     """
-
     :param username: username of the user
     :return: all user info
     """
-    sql = "select * from " + database_name + " where user_name = %s and disabled = false;"
-    result = execute_query(sql=sql, argument=username)
+    client = DbUsersSystem.get_connection() 
+    db = client.db
+    result = db.users.find_one({'user_name': username})
     if result:
+        result['_id'] = str(result['_id'])
         return {
             "success": True,
             "payload": result
@@ -223,7 +362,7 @@ def get_user_liked_books(username: str):
     return {"success": False, "payload": "Not Found"}
 
 
-def new_user(username: str, password: str, email: str, first_name: Optional[str] = None,
+def new_user(username: str, password: str, email: str, solidity_address: str, first_name: Optional[str] = None,
              last_name: Optional[str] = None):
     """
     Sends an insert query to the database using execute_query() to create a new User row.
@@ -240,20 +379,22 @@ def new_user(username: str, password: str, email: str, first_name: Optional[str]
     check_email = get_user_by_email(email)
     if check_user_name['success']:
         return {"success": False, "payload": "Error: username already exist"}
-
     elif check_email['success']:
         return {"success": False, "payload": "Error: email already exist"}
 
-    verification_code = str(uuid.uuid4().hex)
-    sql = "INSERT INTO " + database_name + \
-          "(user_name, password, email, first_name, last_name, verification_code) VALUES (%s, %s, %s, %s, %s, %s)"
-    result = execute_query(sql=sql, argument=(username, password, email, first_name, last_name, verification_code))
-    if not result:
-        send_email(email, verification_code)  # send email for verification
-    if not result:
+    # Insert user_name, password, email, first_name, last_name, verification_code into the db
+    client = DbUsersSystem.get_connection()
+    db = client.db
+    result = db.users.insert_one({'user_name': username, 'password': password, 'solidity_address': solidity_address, 'email': email, 'first_name': first_name,
+                         'last_name': last_name})
+    #Store the new user that was just added 
+    if result.inserted_id is not None:
+        print("Test if we get here!!!")
+        new_user = db.users.find_one({'_id': result.inserted_id})
+        new_user['_id'] = str(new_user['_id'])
         return {
                 "success": True,
-                "payload": result
+                "payload": new_user 
                }
 
     return {"success": False, "payload": "Couldn't register user"}
